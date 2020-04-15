@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BAF40392446A72600F8CC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40382446A72600F8CC5A /* AppDelegate.swift */; };
+		9BAF403B2446A72600F8CC5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF403A2446A72600F8CC5A /* SceneDelegate.swift */; };
+		9BAF403D2446A72600F8CC5A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF403C2446A72600F8CC5A /* RegisterViewController.swift */; };
+		9BAF40402446A72600F8CC5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF403E2446A72600F8CC5A /* Main.storyboard */; };
+		9BAF40432446A72600F8CC5A /* Email_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40412446A72600F8CC5A /* Email_List.xcdatamodeld */; };
+		9BAF40452446A72900F8CC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF40442446A72900F8CC5A /* Assets.xcassets */; };
+		9BAF40482446A72900F8CC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF40462446A72900F8CC5A /* LaunchScreen.storyboard */; };
+		9BAF40532446A72A00F8CC5A /* Email_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40522446A72A00F8CC5A /* Email_ListTests.swift */; };
+		9BAF405E2446A72A00F8CC5A /* Email_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF405D2446A72A00F8CC5A /* Email_ListUITests.swift */; };
+		9BAF406F2446C55B00F8CC5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF406E2446C55B00F8CC5A /* LogInViewController.swift */; };
+		9BAF40712446C5D100F8CC5A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40702446C5D100F8CC5A /* ListViewController.swift */; };
+		9BAF40742446DF1E00F8CC5A /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40722446DF1E00F8CC5A /* EmailCell.swift */; };
+		9BAF40752446DF1E00F8CC5A /* EmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF40732446DF1E00F8CC5A /* EmailCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BAF404F2446A72A00F8CC5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAF402D2446A72600F8CC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAF40342446A72600F8CC5A;
+			remoteInfo = "Email-List";
+		};
+		9BAF405A2446A72A00F8CC5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAF402D2446A72600F8CC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAF40342446A72600F8CC5A;
+			remoteInfo = "Email-List";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BAF40352446A72600F8CC5A /* Email-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Email-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF40382446A72600F8CC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BAF403A2446A72600F8CC5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9BAF403C2446A72600F8CC5A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9BAF403F2446A72600F8CC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BAF40422446A72600F8CC5A /* Email_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Email_List.xcdatamodel; sourceTree = "<group>"; };
+		9BAF40442446A72900F8CC5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BAF40472446A72900F8CC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BAF40492446A72900F8CC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF404E2446A72A00F8CC5A /* Email-ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Email-ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF40522446A72A00F8CC5A /* Email_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email_ListTests.swift; sourceTree = "<group>"; };
+		9BAF40542446A72A00F8CC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF40592446A72A00F8CC5A /* Email-ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Email-ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF405D2446A72A00F8CC5A /* Email_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email_ListUITests.swift; sourceTree = "<group>"; };
+		9BAF405F2446A72A00F8CC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF406E2446C55B00F8CC5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9BAF40702446C5D100F8CC5A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9BAF40722446DF1E00F8CC5A /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
+		9BAF40732446DF1E00F8CC5A /* EmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BAF40322446A72600F8CC5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF404B2446A72A00F8CC5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF40562446A72A00F8CC5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BAF402C2446A72600F8CC5A = {
+			isa = PBXGroup;
+			children = (
+				9BAF40372446A72600F8CC5A /* Email-List */,
+				9BAF40512446A72A00F8CC5A /* Email-ListTests */,
+				9BAF405C2446A72A00F8CC5A /* Email-ListUITests */,
+				9BAF40362446A72600F8CC5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BAF40362446A72600F8CC5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF40352446A72600F8CC5A /* Email-List.app */,
+				9BAF404E2446A72A00F8CC5A /* Email-ListTests.xctest */,
+				9BAF40592446A72A00F8CC5A /* Email-ListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BAF40372446A72600F8CC5A /* Email-List */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF40382446A72600F8CC5A /* AppDelegate.swift */,
+				9BAF403A2446A72600F8CC5A /* SceneDelegate.swift */,
+				9BAF406D2446C45400F8CC5A /* Model */,
+				9BAF406C2446C42E00F8CC5A /* Controller */,
+				9BAF406B2446C42400F8CC5A /* View */,
+				9BAF40442446A72900F8CC5A /* Assets.xcassets */,
+				9BAF40462446A72900F8CC5A /* LaunchScreen.storyboard */,
+				9BAF40492446A72900F8CC5A /* Info.plist */,
+				9BAF40412446A72600F8CC5A /* Email_List.xcdatamodeld */,
+			);
+			path = "Email-List";
+			sourceTree = "<group>";
+		};
+		9BAF40512446A72A00F8CC5A /* Email-ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF40522446A72A00F8CC5A /* Email_ListTests.swift */,
+				9BAF40542446A72A00F8CC5A /* Info.plist */,
+			);
+			path = "Email-ListTests";
+			sourceTree = "<group>";
+		};
+		9BAF405C2446A72A00F8CC5A /* Email-ListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF405D2446A72A00F8CC5A /* Email_ListUITests.swift */,
+				9BAF405F2446A72A00F8CC5A /* Info.plist */,
+			);
+			path = "Email-ListUITests";
+			sourceTree = "<group>";
+		};
+		9BAF406B2446C42400F8CC5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF403E2446A72600F8CC5A /* Main.storyboard */,
+				9BAF40722446DF1E00F8CC5A /* EmailCell.swift */,
+				9BAF40732446DF1E00F8CC5A /* EmailCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BAF406C2446C42E00F8CC5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF403C2446A72600F8CC5A /* RegisterViewController.swift */,
+				9BAF406E2446C55B00F8CC5A /* LogInViewController.swift */,
+				9BAF40702446C5D100F8CC5A /* ListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9BAF406D2446C45400F8CC5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BAF40342446A72600F8CC5A /* Email-List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF40622446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-List" */;
+			buildPhases = (
+				9BAF40312446A72600F8CC5A /* Sources */,
+				9BAF40322446A72600F8CC5A /* Frameworks */,
+				9BAF40332446A72600F8CC5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Email-List";
+			productName = "Email-List";
+			productReference = 9BAF40352446A72600F8CC5A /* Email-List.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BAF404D2446A72A00F8CC5A /* Email-ListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF40652446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-ListTests" */;
+			buildPhases = (
+				9BAF404A2446A72A00F8CC5A /* Sources */,
+				9BAF404B2446A72A00F8CC5A /* Frameworks */,
+				9BAF404C2446A72A00F8CC5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BAF40502446A72A00F8CC5A /* PBXTargetDependency */,
+			);
+			name = "Email-ListTests";
+			productName = "Email-ListTests";
+			productReference = 9BAF404E2446A72A00F8CC5A /* Email-ListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BAF40582446A72A00F8CC5A /* Email-ListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF40682446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-ListUITests" */;
+			buildPhases = (
+				9BAF40552446A72A00F8CC5A /* Sources */,
+				9BAF40562446A72A00F8CC5A /* Frameworks */,
+				9BAF40572446A72A00F8CC5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BAF405B2446A72A00F8CC5A /* PBXTargetDependency */,
+			);
+			name = "Email-ListUITests";
+			productName = "Email-ListUITests";
+			productReference = 9BAF40592446A72A00F8CC5A /* Email-ListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BAF402D2446A72600F8CC5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Sergey Borisov";
+				TargetAttributes = {
+					9BAF40342446A72600F8CC5A = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					9BAF404D2446A72A00F8CC5A = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9BAF40342446A72600F8CC5A;
+					};
+					9BAF40582446A72A00F8CC5A = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9BAF40342446A72600F8CC5A;
+					};
+				};
+			};
+			buildConfigurationList = 9BAF40302446A72600F8CC5A /* Build configuration list for PBXProject "Email-List" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BAF402C2446A72600F8CC5A;
+			productRefGroup = 9BAF40362446A72600F8CC5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BAF40342446A72600F8CC5A /* Email-List */,
+				9BAF404D2446A72A00F8CC5A /* Email-ListTests */,
+				9BAF40582446A72A00F8CC5A /* Email-ListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BAF40332446A72600F8CC5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF40482446A72900F8CC5A /* LaunchScreen.storyboard in Resources */,
+				9BAF40452446A72900F8CC5A /* Assets.xcassets in Resources */,
+				9BAF40752446DF1E00F8CC5A /* EmailCell.xib in Resources */,
+				9BAF40402446A72600F8CC5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF404C2446A72A00F8CC5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF40572446A72A00F8CC5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BAF40312446A72600F8CC5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF403D2446A72600F8CC5A /* RegisterViewController.swift in Sources */,
+				9BAF40392446A72600F8CC5A /* AppDelegate.swift in Sources */,
+				9BAF40712446C5D100F8CC5A /* ListViewController.swift in Sources */,
+				9BAF40742446DF1E00F8CC5A /* EmailCell.swift in Sources */,
+				9BAF40432446A72600F8CC5A /* Email_List.xcdatamodeld in Sources */,
+				9BAF406F2446C55B00F8CC5A /* LogInViewController.swift in Sources */,
+				9BAF403B2446A72600F8CC5A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF404A2446A72A00F8CC5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF40532446A72A00F8CC5A /* Email_ListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF40552446A72A00F8CC5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF405E2446A72A00F8CC5A /* Email_ListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BAF40502446A72A00F8CC5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAF40342446A72600F8CC5A /* Email-List */;
+			targetProxy = 9BAF404F2446A72A00F8CC5A /* PBXContainerItemProxy */;
+		};
+		9BAF405B2446A72A00F8CC5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAF40342446A72600F8CC5A /* Email-List */;
+			targetProxy = 9BAF405A2446A72A00F8CC5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BAF403E2446A72600F8CC5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BAF403F2446A72600F8CC5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BAF40462446A72900F8CC5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BAF40472446A72900F8CC5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BAF40602446A72A00F8CC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BAF40612446A72A00F8CC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BAF40632446A72A00F8CC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-List/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BAF40642446A72A00F8CC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-List/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BAF40662446A72A00F8CC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-ListTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Email-List.app/Email-List";
+			};
+			name = Debug;
+		};
+		9BAF40672446A72A00F8CC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-ListTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Email-List.app/Email-List";
+			};
+			name = Release;
+		};
+		9BAF40692446A72A00F8CC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-ListUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Email-List";
+			};
+			name = Debug;
+		};
+		9BAF406A2446A72A00F8CC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3A45874N;
+				INFOPLIST_FILE = "Email-ListUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Sergey-Borisov.Email-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Email-List";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BAF40302446A72600F8CC5A /* Build configuration list for PBXProject "Email-List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF40602446A72A00F8CC5A /* Debug */,
+				9BAF40612446A72A00F8CC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF40622446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF40632446A72A00F8CC5A /* Debug */,
+				9BAF40642446A72A00F8CC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF40652446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-ListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF40662446A72A00F8CC5A /* Debug */,
+				9BAF40672446A72A00F8CC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF40682446A72A00F8CC5A /* Build configuration list for PBXNativeTarget "Email-ListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF40692446A72A00F8CC5A /* Debug */,
+				9BAF406A2446A72A00F8CC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9BAF40412446A72600F8CC5A /* Email_List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9BAF40422446A72600F8CC5A /* Email_List.xcdatamodel */,
+			);
+			currentVersion = 9BAF40422446A72600F8CC5A /* Email_List.xcdatamodel */;
+			path = Email_List.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9BAF402D2446A72600F8CC5A /* Project object */;
+}
