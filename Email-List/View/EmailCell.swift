@@ -7,18 +7,24 @@
 //
 
 import UIKit
+//import Kingfisher
 
 class EmailCell: UITableViewCell {
 
+    @IBOutlet weak var avatarImage: UIImageView!
+    
+    @IBOutlet weak var senderLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var emailBody: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        avatarImage.layer.cornerRadius = avatarImage.frame.size.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

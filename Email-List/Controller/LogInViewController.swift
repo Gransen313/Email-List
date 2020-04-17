@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInViewController: UIViewController {
     
@@ -20,11 +21,21 @@ class LogInViewController: UIViewController {
         passwordTextField.delegate = self
         
         navigationItem.hidesBackButton = true
+        
+        self.dismissKey()
     }
     
     @IBAction func logInPressed(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "LogInToList", sender: sender)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "LogInToList", sender: self)
+                }
+            }
+        }
     }
     
     @IBAction func toRegisterPressed(_ sender: UIBarButtonItem) {
@@ -39,5 +50,22 @@ extension LogInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
+    }
+}
+
+//MARK: - DismissKeyboard
+extension LogInViewController {
+    
+    func dismissKey() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(RegisterViewController.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
