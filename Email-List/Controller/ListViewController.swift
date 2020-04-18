@@ -11,6 +11,8 @@ import Firebase
 import Kingfisher
 
 class ListViewController: UIViewController {
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -23,19 +25,30 @@ class ListViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         
+        fillMessageList()
+        
         listTableView.register(UINib(nibName: "EmailCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
         let firebaseAuth = Auth.auth()
+        
         do {
             try firebaseAuth.signOut()
-            
             navigationController?.popToRootViewController(animated: true)
             
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
+        }
+    }
+    
+    func fillMessageList() {
+        
+        if db.collection("emails").accessibilityElementCount() == 0 {
+            print("There aren't any elements in collection!!")
+        } else {
+            print("Collection has already been created!!")
         }
     }
 }
@@ -75,3 +88,29 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 }
+
+//let ref = Database.database().reference(fromURL: "DATABASE_PATH")
+//ref.observe(.value, with: { (snapshot: DataSnapshot!) in
+//    if(snapshot.childrenCount > 0){ // It has value already
+//
+//        print(" value")
+//
+//    }
+//    else{ // Still Empty
+//
+//
+//          print("No value")
+//    }
+//})
+//
+//var ref = Firebase(url: FIREBASE_URL)
+//ref.observeEventType(.Value, withBlock: { (snapshot: FDataSnapshot!) in
+//    if(snapshot.childrenCount > 0){ // It has value already
+//
+//   }
+//  else{ // Still Empty
+//
+//    // Upload values to firebase
+//
+//   }
+//})
