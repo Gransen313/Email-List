@@ -17,6 +17,7 @@ struct EmailListModel {
         let subTitle: String
         let body: String
         let date: Date
+        
     }
     
     static let emails = [
@@ -25,7 +26,7 @@ struct EmailListModel {
         Email(avatarURL: "https://i.ibb.co/JFXSV21/Donald-Trump.png",sender: "Donald Trump", subTitle: "Help with corona", body: "Hey, we need some help with CoVid19. Do you remember about it? We've found this IVL were fakes.", date: Date()),
         Email(avatarURL: "https://i.ibb.co/znJ8QkK/Habib-Nurmagomedov.jpg",sender: "Habib Nurmagomedov", subTitle: "Hi, bro!", body: "What's up, man? I'm going to stay in Dagestan until the end of the epidemy. What do you think about it?", date: Date()),
         Email(avatarURL: "https://i.ibb.co/gMLS9nv/Oleg-Veretennikov.jpg",sender: "Oleg Veretennikov", subTitle: "I'm sorry", body: "Better to remain silent and be thought a fool than to speak out and remove all doubt. I really don't know what it is about.", date: Date()),
-        Email(avatarURL: "https://i.ibb.co/SPydrJ2/Rafael-Nadal.jpg",sender: "Rafael Nadal", subTitle: "Pirthday party.", body: "Light travels faster than sound. This is why some people appear bright until you hear them speak.", date: Date()),
+        Email(avatarURL: "https://i.ibb.co/SPydrJ2/Rafael-Nadal.jpg",sender: "Rafael Nadal", subTitle: "Birthday party.", body: "Light travels faster than sound. This is why some people appear bright until you hear them speak.", date: Date()),
         Email(avatarURL: "https://i.ibb.co/nPYVNp2/Anton-Chekhov.jpg",sender: "Anton Chekhov", subTitle: "Kashtanka", body: "I'm gonna have to be taking your car today. See I have some top secret clown business that supersedes any plans that you might have for this here vehicle.", date: Date()),
         Email(avatarURL: "https://i.ibb.co/pf8htW9/Elton-John.jpg",sender: "sr. Elton John", subTitle: "My comming out!", body: "Men marry women with the hope they will never change. Women marry men with the hope they will change. Invariably they are both disappointed.", date: Date()),
         Email(avatarURL: "https://i.ibb.co/PxdJ8N2/Ilya-Reznik.jpg",sender: "Ilya Reznik", subTitle: "For you.", body: "It would be nice to spend billions on schools and roads, but right now that money is desperately needed for political ads.", date: Date()),
@@ -53,3 +54,4 @@ struct EmailListModel {
         Email(avatarURL: "https://i.ibb.co/pyshbvf/Captain-Spaulding.jpg",sender: "Captain Spolding", subTitle: "Tutty-mtf-frutty", body: "Why? Don't we make ya laugh? Aren't we fuckin' funny? You best come up with an answer, cos I'm gonna come back here and check on you and your momma and if you ain't got a reason why you hate clowns, I'm gonna kill your whole fucking family.", date: Date())
     ]
 }
+
