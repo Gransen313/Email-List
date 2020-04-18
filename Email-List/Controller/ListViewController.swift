@@ -27,6 +27,8 @@ class ListViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         
+        searchBar.delegate = self
+        
         fillEmailListIntoFirestore()
         
         listTableView.register(UINib(nibName: "EmailCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
@@ -96,7 +98,7 @@ class ListViewController: UIViewController {
         db.collection("emails")
             .order(by: "date")
             .order(by: "sender")
-            .addSnapshotListener { (querySnapshot, error) in
+            .getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("There was a problem with gettinf documents from Fisebase: \(e)!!")
             } else {
@@ -162,4 +164,11 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+}
+
+//MARK: - Search Bar Methods
+
+extension ListViewController: UISearchBarDelegate {
+    
+    
 }
