@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Kingfisher
 
 class EmailCell: UITableViewCell {
 
@@ -21,10 +20,11 @@ class EmailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        //Make avatarImage round.
         avatarImage.layer.cornerRadius = avatarImage.frame.size.height / 2
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
 }

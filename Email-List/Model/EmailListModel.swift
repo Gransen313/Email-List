@@ -10,6 +10,7 @@ import Foundation
 
 struct EmailListModel {
     
+    //Structure which we need to create an email.
     struct Email {
         
         let avatarURL: String
@@ -20,6 +21,7 @@ struct EmailListModel {
         
     }
     
+    //Reserve massive of emails for filling Firebase database.
     static let emails = [
         Email(avatarURL: "https://i.ibb.co/Rhty5g0/Emily-Ratajkowski.jpg", sender: "Emily Ratajkowski", subTitle: "Why don't you call me?", body: "Hey, Why u don't call me? Do u know my number??? I've left my knickers in your room, u should give it back immediately!!!!", date: Calendar.current.startOfDay(for: Date())),
         Email(avatarURL: "https://i.ibb.co/1022X5z/Godzilla.jpg", sender: "Godzilla", subTitle: "About a job!", body: "Hello! I haven't destroyed any cities for a too long time... I feel empty and realy sad. Could you rise up my mood, plaese)))", date: Calendar.current.startOfDay(for: Date())),

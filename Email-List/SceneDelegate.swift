@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,10 +15,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        setRootViewController()
+        
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    // Function for setting correct navigation stack for rootViewController.
+    func setRootViewController() {
+        
+        let storyboard =  UIStoryboard(name: Const.mainStoryboardName, bundle: nil)
+        
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let listVC = storyboard.instantiateViewController(withIdentifier: Const.VCID.list)
+        let registerVC = storyboard.instantiateViewController(withIdentifier: Const.VCID.register)
+        
+        if Auth.auth().currentUser != nil {
+            navigationController.viewControllers = [registerVC, listVC]
+        } else {
+            navigationController.viewControllers = [registerVC]
+        }
+        
+        window?.rootViewController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

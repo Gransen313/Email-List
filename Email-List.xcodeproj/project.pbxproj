@@ -25,6 +25,7 @@
 		9BAF40742446DF1E00F8CC5A /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF40722446DF1E00F8CC5A /* EmailCell.swift */; };
 		9BAF40752446DF1E00F8CC5A /* EmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF40732446DF1E00F8CC5A /* EmailCell.xib */; };
 		9BAF4077244875AC00F8CC5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF4076244875AC00F8CC5A /* GoogleService-Info.plist */; };
+		9BE30CD3244F465A0017782A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE30CD2244F465A0017782A /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9BAF40722446DF1E00F8CC5A /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
 		9BAF40732446DF1E00F8CC5A /* EmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailCell.xib; sourceTree = "<group>"; };
 		9BAF4076244875AC00F8CC5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9BE30CD2244F465A0017782A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A88C8ECB6645EF0ECCCDB33E /* Pods-Email-List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-List.release.xcconfig"; path = "Target Support Files/Pods-Email-List/Pods-Email-List.release.xcconfig"; sourceTree = "<group>"; };
 		AF032F3895920FE1A1FF7979 /* Pods-Email-List-Email-ListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-List-Email-ListUITests.release.xcconfig"; path = "Target Support Files/Pods-Email-List-Email-ListUITests/Pods-Email-List-Email-ListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F06C6EF950B542C49C733246 /* Pods-Email-List-Email-ListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-List-Email-ListUITests.debug.xcconfig"; path = "Target Support Files/Pods-Email-List-Email-ListUITests/Pods-Email-List-Email-ListUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4E35412448C2E8008631EC /* EmailListModel.swift */,
+				9BE30CD2244F465A0017782A /* Const.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				9BAF406F2446C55B00F8CC5A /* LogInViewController.swift in Sources */,
 				9B4E35422448C2E8008631EC /* EmailListModel.swift in Sources */,
 				9BAF403B2446A72600F8CC5A /* SceneDelegate.swift in Sources */,
+				9BE30CD3244F465A0017782A /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HY3A45874N;
 				INFOPLIST_FILE = "Email-List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,6 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HY3A45874N;
 				INFOPLIST_FILE = "Email-List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

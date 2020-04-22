@@ -10,7 +10,7 @@
         <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Email_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Email_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,6 @@
                         <barButtonItem key="rightBarButtonItem" title="To Log In" id="IXy-bp-ss9">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="toLogInPressed:" destination="BYZ-38-t0r" id="V4C-vZ-Rtd"/>
                                 <segue destination="0J1-zK-e9f" kind="show" identifier="" id="NKe-2a-Sl0"/>
                             </connections>
                         </barButtonItem>
@@ -97,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134.375" y="115"/>
+            <point key="canvasLocation" x="1154" y="824"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="kcl-C9-Rf4">
@@ -181,31 +180,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AT-5s-74z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="824"/>
+            <point key="canvasLocation" x="1153" y="1541"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="Dbc-YJ-aQd">
             <objects>
-                <viewController id="aly-7h-118" customClass="ListViewController" customModule="Email_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" id="aly-7h-118" customClass="ListViewController" customModule="Email_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JFj-kn-83N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-YT-d9u">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-yc-VXf">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="BeX-Fa-VdI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
-                            </tableView>
+                                <subviews>
+                                    <searchBar contentMode="redraw" text="" showsCancelButton="YES" id="BeX-Fa-VdI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-YT-d9u">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="668"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="JxC-YT-d9u" firstAttribute="leading" secondItem="ud8-XQ-OIr" secondAttribute="leading" id="O1Y-lf-ZWR"/>
-                            <constraint firstItem="JxC-YT-d9u" firstAttribute="top" secondItem="ud8-XQ-OIr" secondAttribute="top" id="QKc-bC-ANL"/>
-                            <constraint firstAttribute="bottom" secondItem="JxC-YT-d9u" secondAttribute="bottom" id="h7S-8F-c2g"/>
-                            <constraint firstItem="JxC-YT-d9u" firstAttribute="trailing" secondItem="ud8-XQ-OIr" secondAttribute="trailing" id="lj5-s4-hRg"/>
+                            <constraint firstAttribute="bottom" secondItem="iIb-yc-VXf" secondAttribute="bottom" id="Fba-UJ-xVD"/>
+                            <constraint firstItem="iIb-yc-VXf" firstAttribute="top" secondItem="ud8-XQ-OIr" secondAttribute="top" id="gCe-hJ-HxV"/>
+                            <constraint firstItem="iIb-yc-VXf" firstAttribute="trailing" secondItem="ud8-XQ-OIr" secondAttribute="trailing" id="hoJ-ni-v8k"/>
+                            <constraint firstItem="iIb-yc-VXf" firstAttribute="leading" secondItem="ud8-XQ-OIr" secondAttribute="leading" id="otP-MY-fgc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ud8-XQ-OIr"/>
                     </view>
@@ -224,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivU-gR-hKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="450"/>
+            <point key="canvasLocation" x="2124" y="1166"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="26y-qm-aGh">
@@ -245,15 +253,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5Mr-CB-PIj"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" destinationCreationSelector="StartWithRegister" id="zOy-6W-lKQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cas-rr-oGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="115"/>
+            <point key="canvasLocation" x="182" y="824"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d0V-Bk-nei"/>
+        <segue reference="nKQ-Hb-aBZ"/>
     </inferredMetricsTieBreakers>
 </document>
