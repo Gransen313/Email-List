@@ -11,7 +11,6 @@ import Foundation
 struct Const {
     
     static let mainStoryboardName = "Main"
-    
     static let cellID = "ReusableCell"
     static let cellNibName = "EmailCell"
     static let dateFormat = "dd MMM yyyy"

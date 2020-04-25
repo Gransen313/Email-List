@@ -10,7 +10,9 @@ import UIKit
 
 class EmailCell: UITableViewCell {
 
+    
     @IBOutlet weak var avatarImage: UIImageView!
+    
     
     @IBOutlet weak var senderLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
