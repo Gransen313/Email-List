@@ -18,7 +18,16 @@ struct Const {
     struct Segue {
     
         static let registerToList = "RegisterToList"
+        static let registerToLogIn = "RegisterToLogIn"
+        static let registerToTip = "RegisterToTipVC"
         static let logInToList = "LogInToList"
+        static let logInToTip = "logInToTipVC"
+    }
+    
+    struct Sender {
+        static let email = "email"
+        static let password = "password"
+        static let confirm = "confirm"
     }
     
     struct VCID {

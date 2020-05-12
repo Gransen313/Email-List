@@ -27,48 +27,43 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInPressed(_ sender: UIButton) {
         
-        //Checking that text fields aren't empty.
+        //Checking if text fields aren't empty.
         if let email = emailTextField.text, let password = passwordTextField.text {
-            
-            chekingTextFieldsValidity(email, password)
-            
-            if email.isValidEmail && password.isValidPassword {
-                
-                //Try to sign in.
-                Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                    if let e = error {
-                        print(e.localizedDescription)
-                        self.emailTextField.text = ""
-                        self.emailTextField.placeholder = "Wrong email or password"
-                        self.passwordTextField.text = ""
-                        self.passwordTextField.placeholder = "Wrong email or password"
-                    } else {
-                        self.performSegue(withIdentifier: Const.Segue.logInToList, sender: self)
-                        print("User successfully logged in!")
+            //Chacking if email and password are valid.
+            if email.isValidEmail {
+                if password.isValidPassword {
+                    
+                    //Try to sign in.
+                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                        if let e = error {
+                            print(e.localizedDescription)
+                            self.performSegue(withIdentifier: Const.Segue.logInToTip, sender: e.localizedDescription)
+                        } else {
+                            self.performSegue(withIdentifier: Const.Segue.logInToList, sender: self)
+                            print("User successfully logged in!")
+                        }
                     }
-                }
-            }
+                } else { performSegue(withIdentifier: Const.Segue.logInToTip, sender: Const.Sender.password) }
+            } else { performSegue(withIdentifier: Const.Segue.logInToTip, sender: Const.Sender.email) }
         }
     }
     
-    //Checking that email and password are valid. If not, fill textFields with tips.
-    func chekingTextFieldsValidity(_ email: String, _ password: String) {
-        
-        if !email.isValidEmail {
-            print("Email \(email) isn't valid!")
-            emailTextField.text = ""
-            emailTextField.placeholder = "Email isn't valid"
-        }
-        if !password.isValidPassword {
-            print("Password \(password) isn't correct password")
-            passwordTextField.text = ""
-            passwordTextField.placeholder = "Password isn't valid"
+    //Prepare Segue to change tipLabel.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Const.Segue.logInToTip {
+            let destinationVC = segue.destination as! TipViewController
+                
+            switch sender as? String {
+            case Const.Sender.email: destinationVC.tipText = "Email format isn't correct!"
+            case Const.Sender.password: destinationVC.tipText = "Password must contain from 6 to 30 symbols. Only Latin letters, numbers and symbols @!-_? are allowed!"
+            default:
+                    destinationVC.tipText = sender as? String
+            }
         }
     }
     
     //Navigate to Register screen
     @IBAction func toRegisterPressed(_ sender: UIBarButtonItem) {
-        
         navigationController?.popToRootViewController(animated: true)
     }
 }
@@ -78,7 +73,6 @@ extension LogInViewController: UITextFieldDelegate {
     
     //Dismiiss keyboard when return button pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
     }
 }
@@ -87,12 +81,9 @@ extension LogInViewController: UITextFieldDelegate {
 extension LogInViewController {
     
     //Dismiss keyboard when tap somewhere outside the keyboard.
-    func dismissKey() {
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(RegisterViewController.dismissKeyboard))
-        
+    private func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(LogInViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
-        
         view.addGestureRecognizer(tap)
     }
     
