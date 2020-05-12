@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		01514ECC3262E3F60648EF86 /* Pods-Email-List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-List.debug.xcconfig"; path = "Target Support Files/Pods-Email-List/Pods-Email-List.debug.xcconfig"; sourceTree = "<group>"; };
 		0CFFA3BE22C27701C68DDDFD /* Pods-Email-ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-ListTests.release.xcconfig"; path = "Target Support Files/Pods-Email-ListTests/Pods-Email-ListTests.release.xcconfig"; sourceTree = "<group>"; };
-		42EA45C6CC23E21C1A27D1BB /* Pods_Email_List_Email_ListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Email_List_Email_ListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		679C2EFE1F2450A43BDAA586 /* Pods_Email_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Email_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939EBCD66881330717572ACE /* Pods-Email-ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Email-ListTests.debug.xcconfig"; path = "Target Support Files/Pods-Email-ListTests/Pods-Email-ListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4E35412448C2E8008631EC /* EmailListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListModel.swift; sourceTree = "<group>"; };
@@ -164,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				679C2EFE1F2450A43BDAA586 /* Pods_Email_List.framework */,
-				42EA45C6CC23E21C1A27D1BB /* Pods_Email_List_Email_ListUITests.framework */,
 				FC9D1511D1BF091D96DE884E /* Pods_Email_ListTests.framework */,
 			);
 			name = Frameworks;
