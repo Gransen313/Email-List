@@ -16,8 +16,4 @@ target 'Email-List' do
     # Pods for testing
   end
 
-  target 'Email-ListUITests' do
-    # Pods for testing
-  end
-
 end
